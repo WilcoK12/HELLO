@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	float heroHealth = 50.0f;
+	cout << "You were cut by a poisonous blade.\n";
+	// do while loop
+	do
+	{
+		cout << "POISON DAMAGE!" << endl;
+		--heroHealth;
+		cout << "Hero Health:" << heroHealth << endl;
+	} while (heroHealth > 1);
+//-------------------------------------------------------
+	//while loop 
+	cout << "Quick, quaff the healing potion\n";
+	while (heroHealth< 50.0f)
+	{
+		cout << "Drinking healing potion\n";
+		++heroHealth;
+		cout << "Hero Health:" << heroHealth << endl;
+
+	}
+	//-------------------------------------------
+	//for loop
+	/*
+	for (Section1;Section2;Section4)
+	{
+			Section3
+	}
+	*/
+	cout << "Wait 5 seconds for your magic to recharge\n";
+	for (int n = 0; n < 5 ; ++n)
+	{
+		cout << "Charging Magic\n";
+		Sleep(1000);
+
+	}
+	cout << "Magic is fully charged\n";
+//---------------------------------------------------------
+	//Ranged based for loop
+	string stringRange="Tragernator" ;
+
+	for (auto characterHolder : stringRange)
+	{
+		cout << "~" << characterHolder ;
+		
+	}
+	cout << '\n';
+
+
+}
